@@ -1,31 +1,19 @@
 ---
 ---
-<!DOCTYPE html>
-<html>
-  <head>
-    {% if page.title %}
-      <title>{{ page.title }}</title>
-    {% endif %}
-    {% include header.html %}
-    <link rel="stylesheet" type="text/css" href="{{page.root}}/css/lesson.css" />
-  </head>
-  <body>
-    <div class="container">
-      {% include banner.html %}
-
-      <div class="row-fluid">
-        <div class="span10 offset1">
-	  <!-- start content -->
-          {% if page.title %}
-          <h1>{{page.title}}</h1>
-          {% endif %}
-          {{content}}
-	  <!-- end content -->
-	</div>
-      </div>
-
-      {% include footer.html %}
+<!doctype html>
+<html lang="en">
+<head>
+{% include head.html %}
+</head>
+<body id="top-of-page" class="lesson">
+{% include header.html %}
+  <div class="row">
+    <div class="medium-12 columns">
+        <h1><a href="{{site.baseurl}}/">{{ site.lesson_title }}</a></h1>
+      {{ content }}
     </div>
-    {% include javascript.html %}
-  </body>
+  </div>
+{% include footer.html %}
+{% include javascript.html %}
+</body>
 </html>
