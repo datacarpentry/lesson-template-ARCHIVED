@@ -72,6 +72,14 @@ body.video cite { color: #fff; }
     color: black;
     margin-bottom: 40px;
 }
+
+.data-carpentry{
+    #masthead ,
+    #masthead-no-image-header {
+        background-color: $dc-header-background-color;
+    }
+}
+
 #masthead-with-text {
     text-align: center;
     font-size: rem-calc(54);
