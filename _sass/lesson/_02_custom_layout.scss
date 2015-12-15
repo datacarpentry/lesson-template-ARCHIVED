@@ -65,32 +65,36 @@ body.video cite { color: #fff; }
 
 #masthead {
     background-color: $primary-color;
-    color: #ffffff;
+    color: black;
 }
 #masthead-no-image-header {
     background-color: $primary-color;
-    color: #ffffff;
+    color: black;
     margin-bottom: 40px;
 }
+
+.data-carpentry{
+    #masthead ,
+    #masthead-no-image-header {
+        background-color: $dc-header-background-color;
+    }
+}
+
 #masthead-with-text {
     text-align: center;
     font-size: rem-calc(54);
     font-family: $header-font-family;
-    color: #ffffff;
+    color: black;
     text-transform: uppercase;
     text-shadow: 0 2px 3px rgba(0,0,0,.4);
 }
-#masthead-no-image-header {
-    height: 115px;
-}
+
 #masthead-no-image-header #logo img {
-    margin-top: 10px;
+    margin: 0;
     width: 100%;
+    padding: 10px;
 }
 
-h3.masthead {
-    color: #ffffff;
-}
 
 /* Masthead › small-only
 ------------------------------------------------------------------- */

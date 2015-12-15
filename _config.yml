@@ -10,7 +10,7 @@ domain: "http://gvwilson.github.io"
 
 # Base URL below the domain (no trailing slash).
 # This will usually be the workshop slug with a leading slash.
-baseurl: "/dc-workshop-template"
+baseurl: "/dc-lesson-template"
 
 #--------------------------------------------------------------------------------
 # Standard Data Carpentry settings - should not need to be modified.
@@ -26,7 +26,7 @@ parent_domain : "http://gvwilson.github.io/swctasks-datacarpentry.github.io"
 footer_description : "Data Carpentry is volunteer non-profit organization dedicated to teaching basic data analysis skills to researchers."
 
 # Logo image (black with transparent background).
-logo: "logo.png"
+logo: "DC2_logo.png"
 
 installer   : "http://files.software-carpentry.org/SWCarpentryInstaller.exe"
 
