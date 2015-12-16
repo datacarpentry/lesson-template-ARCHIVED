@@ -8,11 +8,14 @@ sitemap:
 @import "foundation-components/normalize.scss"; // always first
 @import "foundation-components/functions.scss";
 
-@import "lesson/settings_colors.scss";
-@import "lesson/settings_global.scss";
+@import "dc-lesson/settings_colors.scss";
+@import "dc-lesson/settings_global.scss";
+
+/* +++++++++++++++++ Foundation icons +++++++++++++++++ */
+$icon-font-path: "../fonts/" !default;
 
 /* +++++++++++++++++ Glyphicons from twitter bootstrap +++++++++++++++++ */
-$icon-font-path: "../fonts/glyphicon-fonts/" !default;
+$glyphicon-font-path: "../fonts/glyphicon-fonts/" !default;
 
 @import "foundation-components/global";
 //@import "foundation-components/accordion";
@@ -56,6 +59,6 @@ $icon-font-path: "../fonts/glyphicon-fonts/" !default;
 @import "foundation-components/syntax-highlighting.scss";
 
 
-@import "lesson/01_custom_typography.scss";
-@import "lesson/02_custom_layout.scss";
-@import "lesson/03_custom_elements.scss";
+@import "dc-lesson/01_custom_typography.scss";
+@import "dc-lesson/02_custom_layout.scss";
+@import "dc-lesson/03_custom_elements.scss";

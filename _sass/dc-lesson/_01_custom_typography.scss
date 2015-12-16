@@ -1,6 +1,6 @@
-/* TOC – Typography
+/* TOC – Typography
 
-Check typography variables › _3_typography_settings.scss
+Check typography variables › _3_typography_settings.scss
 
 - Links
 - Customize Foundation Typography
@@ -27,19 +27,19 @@ a,
 a:link {}
 
 a:visited {
-        border-bottom: $grey-2;
+    border-bottom: $grey-2;
 }
 
 a:hover {
-        color: darken( $ci-1, 10% );
+    color: darken( $ci-1, 10% );
 }
 
 a:focus {
-        color: lighten( $ci-1, 20% );
+    color: lighten( $ci-1, 20% );
 }
 
 a:active {
-        color: darken( $ci-1, 20% );
+    color: darken( $ci-1, 20% );
 }
 
 
@@ -53,21 +53,26 @@ p {
     -ms-hyphens: auto;
     hyphens: auto;
 }
+
 p a,
 article a {
+    text-decoration: none;
     font-weight: bold;
     border-bottom: 1px dotted;
 }
+
 p a:hover,
 article a:hover {
     border-bottom: 2px solid;
 }
+
 p a.button,
 .button,
 .button:hover {
     border: 0;
     color: #fff;
 }
+
 p.button a {
     border: 0;
     color: #fff;
@@ -86,26 +91,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: $font-size-h1;
     margin-top: 0;
 }
 h2 {
-    font-size: $font-size-h2;
     margin: 1.563em 0 0 0;
 }
     .blog-index h2 {
         margin-top: 0;
     }
 h3 {
-    font-size: $font-size-h3;
     margin: 1.152em 0 0 0;
 }
 h4 {
-    font-size: $font-size-h4;
     margin: 1.152em 0 0 0;
 }
 h5 {
-    font-size: $font-size-h5;
     margin: 1em 0 0 0;
 }
 
@@ -115,6 +115,7 @@ h5 {
 ------------------------------------------------------------------- */
 
 img { border-radius: $global-radius;}
+
     img.alignleft,
     img.left        { float: left; margin:5px 15px 5px 0; }
     img.alignright,
@@ -152,7 +153,6 @@ figcaption a:hover,
 }
 
 
-
 /* Tables
 ------------------------------------------------------------------- */
 
@@ -188,7 +188,7 @@ code {
 ------------------------------------------------------------------- */
 
 ul, ol {
-    margin-left: 20px;
+    margin-left: 3em;
     padding: 0;
 }
 li {
@@ -210,58 +210,38 @@ li {
 dl {
 
 }
+/*
 dt:first-child {
     padding-top: 0px;
 }
+*/
 dt {
     font-weight: bold;
-    padding-top: 30px;
+    /* padding-top: 30px; */
 }
 dd {
 }
-article dl dt   { line-height: 1.3; }
-article dl dd   { line-height: 1.6; margin-bottom: rem-calc(12); margin-left: rem-calc(24); }
+/*
+article dl dt {
+    line-height: 1.3;
+}
+*/
+article dl dd {
+    /* line-height: 1.6; */
+    /* margin-bottom: rem-calc(12); */
+    margin-left: rem-calc(24);
+}
 
 
 
 /* Quotes
 ------------------------------------------------------------------- */
 
-blockquote {
-    font-style: italic;
-    position: relative;
-    border: none;
-    margin: 0 30px 30px 30px;
-    color: #4b4b4d
-}
 
-    blockquote p {font-style: italic; color: $grey-10; }
 
-    blockquote:before {
-        display:block;content:"\00BB";
-        font-size:80px;
-        position:absolute;
-        left:-25px;
-        top:-40px;
-        color:#4b4b4d
-    }
-    blockquote:after {
-        display:block;
-        content:"\00AB";
-        font-size:80px;
-        position:absolute;
-        right:-10px;
-        bottom:-40px;
-        color:#4b4b4d;
-    }
-    blockquote cite:before {
-        content:"\2014 \0020"
-    }
-    blockquote cite a,blockquote cite a:visited {
-        color: #555
-    }
+
 cite {
-    padding-top: 5px;
+    padding-top: 15px;
 }
 
 button, .button {
@@ -305,45 +285,17 @@ mark {
 }
 
 
-
-/* Additional typographical elements
-------------------------------------------------------------------- */
-
-.sans           { font-family: $font-family-sans-serif; }
-.serif          { font-family: $font-family-serif; }
-
-.font-size-h1   { font-size: $font-size-h1; }
-.font-size-h2   { font-size: $font-size-h2; }
-.font-size-h3   { font-size: $font-size-h3; }
-.font-size-h4   { font-size: $font-size-h4; }
-.font-size-h5   { font-size: $font-size-h5; }
-.font-size-p    { font-size: $font-size-p; }
-
-
-
-/* Footnotes
-------------------------------------------------------------------- */
-
-.footnotes {
-    margin-top: 60px;
-}
-.footnotes ol {
-    font-size: $font-size-small;
-}
-
-
-
 /* Icon Font
    See the icon-set/preview in /assets/fonts/iconfont-preview.html
 ------------------------------------------------------------------- */
 
 @font-face {
   font-family: 'iconfont';
-  src: url('../../fonts/iconfont.eot'); /* IE9 Compat Modes */
-  src: url('../../fonts/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../../fonts/iconfont.woff') format('woff'), /* Pretty Modern Browsers */
-       url('../../fonts/iconfont.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('../../fonts/iconfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+  src: url('#{$icon-font-path}iconfont.eot'); /* IE9 Compat Modes */
+  src: url('#{$icon-font-path}iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('#{$icon-font-path}iconfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('#{$icon-font-path}iconfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('#{$icon-font-path}iconfont.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 
 .iconfont       { font-family: iconfont; }
@@ -475,3 +427,18 @@ font-smoothing: antialiased;
 .icon-warning:before { content: "\f131"; }
 .icon-xing:before { content: "\f135"; }
 .icon-youtube:before { content: "\f132"; }
+
+
+
+/* +++++++++++++++++ Glyphicons from twitter bootstrap +++++++++++++++++ */
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+
+  src: url('#{$glyphicon-font-path}glyphicons-halflings-regular.eot');
+  src: url('#{$glyphicon-font-path}glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
+       url('#{$glyphicon-font-path}glyphicons-halflings-regular.woff2') format('woff2'),
+       url('#{$glyphicon-font-path}glyphicons-halflings-regular.woff') format('woff'),
+       url('#{$glyphicon-font-path}glyphicons-halflings-regular.ttf') format('truetype'),
+       url('#{$glyphicon-font-path}glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
