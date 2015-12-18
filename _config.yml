@@ -1,15 +1,15 @@
 #--------------------------------------------------------------------------------
-# Values for this workshop - EDIT THIS SECTION.
+# Values for this lesson - EDIT THIS SECTION.
 #--------------------------------------------------------------------------------
-workshop_repo   : "http://github.com/datacarpentry/workshop-template"
-workshop_site   : "http://datacarpentry.github.io/workshop-template"
+lesson_repo   : "http://github.com/datacarpentry/lesson-template"
+lesson_site   : "http://datacarpentry.github.io/lesson-template"
 
 # Website domain (no trailing slash).
 # E.g., http://yourname.github.io
 domain: "http://gvwilson.github.io"
 
 # Base URL below the domain (no trailing slash).
-# This will usually be the workshop slug with a leading slash.
+# This will usually be the lesson slug with a leading slash.
 baseurl: "/dc-lesson-template"
 
 #--------------------------------------------------------------------------------
