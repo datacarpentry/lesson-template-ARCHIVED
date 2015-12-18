@@ -7,8 +7,8 @@
 @import "foundation-components/normalize"; // always first
 @import "foundation-components/functions";
 
-@import "dc-lesson/dc_settings_colors.scss";
-@import "dc-lesson/dc_settings_global.scss";
+@import "dc/settings_colors.scss";
+@import "dc/settings_global.scss";
 
 @import "foundation-components/global";
 //@import "foundation-components/accordion";
@@ -51,35 +51,7 @@
 @import "foundation-components/visibility";
 @import "foundation-components/syntax-highlighting.scss";
 
-
-@import "dc-lesson/01_custom_typography.scss";
-@import "dc-lesson/02_custom_layout.scss";
-@import "dc-lesson/03_custom_elements.scss";
-
-.venueDatas{
-    border: 1px solid $swc-blue-light;
-    border-radius: $global-radius;
-    background: $dc-header-background-color;
-    padding: 20px;
-    margin-top: 40px;
-
-    h2{
-        margin: 0 0 20px 0;
-    }
-}
-
-/* +++++++++++++++++ Glyphicons from twitter bootstrap +++++++++++++++++ */
-$glyphicon-font-path: "../fonts/glyphicon-fonts/" !default;
-
-/* +++++++++++++++++ Glyphicons from twitter bootstrap +++++++++++++++++ */
-
-@font-face {
-  font-family: 'Glyphicons Halflings';
-
-  src: url('#{$glyphicon-font-path}glyphicons-halflings-regular.eot');
-  src: url('#{$glyphicon-font-path}glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
-       url('#{$glyphicon-font-path}glyphicons-halflings-regular.woff2') format('woff2'),
-       url('#{$glyphicon-font-path}glyphicons-halflings-regular.woff') format('woff'),
-       url('#{$glyphicon-font-path}glyphicons-halflings-regular.ttf') format('truetype'),
-       url('#{$glyphicon-font-path}glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
-}
+@import "common/01_typography";
+@import "common/02_layout";
+@import "common/03_elements";
+@import "common/04_glyphicons";
