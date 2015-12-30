@@ -1,8 +1,8 @@
 #--------------------------------------------------------------------------------
 # Values for this lesson - EDIT THIS SECTION.
 #--------------------------------------------------------------------------------
-lesson_repo   : "http://github.com/datacarpentry/lesson-template"
-lesson_site   : "http://datacarpentry.github.io/lesson-template"
+github_repo   : "http://github.com/datacarpentry/lesson-template"
+github_site   : "http://datacarpentry.github.io/lesson-template"
 
 # Website domain (no trailing slash).
 # E.g., http://yourname.github.io
