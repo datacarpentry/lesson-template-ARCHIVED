@@ -1,3 +1,6 @@
+# Common Makefile for all projects.
+# Put project-specific commands and definition in "commands.mk".
+
 # Settings
 MAKEFILES=Makefile $(wildcard *.mk)
 CONFIG=--config _config.yml,_config_dev.yml
@@ -12,8 +15,8 @@ commands :
 serve :
 	bundle exec jekyll serve ${CONFIG}
 
-## build      : build files but do not run a server.
-build :
+## site       : build files but do not run a server.
+site :
 	bundle exec jekyll build ${CONFIG}
 
 ## install    : install missing Ruby gems using bundle.
