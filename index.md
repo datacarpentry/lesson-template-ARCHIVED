@@ -17,10 +17,8 @@ status: Under Development
 <!-- THE LESSON INFORMATION -->
 
 
-#Data Carpentry {{ page.topic }} for {{ page.domain }}
+Data Carpentry {{ page.topic }} for {{ page.domain }}
 =======
-
-# Data Carpentry {{ page.topic }} for {{ page.domain }}
 
 Data Carpentry's aim is to teach researchers basic concepts, skills,
 and tools for working more effectively with data.
