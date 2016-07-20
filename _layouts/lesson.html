@@ -10,18 +10,59 @@
     <link rel="stylesheet" type="text/css" href="{{page.root}}/css/lesson.css" />
   </head>
   <body>
+    <!-- Schema.org annotations in JSON-LD for a CreativeWork type.
+         Variables should be declared in the .md file 
+         For full list of available attributes see https://schema.org/CreativeWork -->
+    <script type="application/ld+json">
+    {
+       "@context": "http://schema.org/",
+       "@type": "creativeWork",
+       "genre": "trainingMaterial",
+       "name": "{{page.title}}",
+       "description": "{{page.description}}",
+       "keywords": "{{page.keywords}}",
+       "audience": [
+          {% for audience in page.audience %}{
+           "@type": "Audience",
+           "name": "{{audience}}"
+          }{% if forloop.last %}{%else%},{%endif%}
+          {% endfor %}
+       ],
+       "license": "{{page.licence}}",
+       "author": [
+         {% for author in page.author %}{
+           "@type": "Person",
+           "name": "{{author}}"
+          }{% if forloop.last %}{%else%},{%endif%}
+          {% endfor %}
+      ],
+       "contributor": [
+         {% for contributor in page.contributor %}{
+           "@type": "Person",
+           "name": "{{contributor}}"
+          }{% if forloop.last %}{%else%},{%endif%}
+          {% endfor %}
+      ],
+       "timeRequired": "{{page.timeRequired}}",
+       "learningResourceType": "{{page.learningResourceType}}",
+       "citation": "{{page.citation}}",
+       "dateCreated" : "{{page.dateCreated}}"
+    }
+    </script>
+    <!-- end of schema.org annotations -->
+
     <div class="container">
       {% include banner.html %}
 
       <div class="row-fluid">
         <div class="span10 offset1">
-	  <!-- start content -->
+          <!-- start content -->
           {% if page.title %}
           <h1>{{page.title}}</h1>
           {% endif %}
           {{content}}
-	  <!-- end content -->
-	</div>
+          <!-- end content -->
+        </div>
       </div>
 
       {% include footer.html %}
