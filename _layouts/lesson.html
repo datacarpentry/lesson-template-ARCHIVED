@@ -20,14 +20,33 @@
        "genre": "trainingMaterial",
        "name": "{{page.title}}",
        "description": "{{page.description}}",
+       "keywords": "{{page.keywords}}",
+       "audience": [
+          {% for audience in page.audience %}{
+           "@type": "Audience",
+           "name": "{{audience}}"
+          }{% if forloop.last %}{%else%},{%endif%}
+          {% endfor %}
+       ],
        "license": "{{page.licence}}",
-       "citation": "{{page.citation}}",
-       "author": {
+       "author": [
+         {% for author in page.author %}{
            "@type": "Person",
-           "name": "{{page.author}}"
-       },
-       "timeRequired": "{{page.minutes}}",
-       "learningResourceType": "{{page.learning_resource_type}}"
+           "name": "{{author}}"
+          }{% if forloop.last %}{%else%},{%endif%}
+          {% endfor %}
+      ],
+       "contributor": [
+         {% for contributor in page.contributor %}{
+           "@type": "Person",
+           "name": "{{contributor}}"
+          }{% if forloop.last %}{%else%},{%endif%}
+          {% endfor %}
+      ],
+       "timeRequired": "{{page.timeRequired}}",
+       "learningResourceType": "{{page.learningResourceType}}",
+       "citation": "{{page.citation}}",
+       "dateCreated" : "{{page.dateCreated}}"
     }
     </script>
     <!-- end of schema.org annotations -->
