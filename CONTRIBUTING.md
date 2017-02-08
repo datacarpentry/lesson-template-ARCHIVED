@@ -71,6 +71,13 @@ guidelines:
 * Wrap lines at 80 characters (unless it breaks URLs)
 * Use unclosed atx style headers (see below)
 
+```
+## Use this format for headers
+
+And not this format
+-------------------
+```
+
 ## FAQ
 
 *   *Where can I get help?*
